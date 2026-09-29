@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>John David Javier | Academic Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- BACKGROUND EFFECT -->
+<div class="background">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- NAVIGATION -->
+<header class="navbar">
+
+    <div class="logo">
+        <span>&lt;</span> JDJ <span>/&gt;</span>
+    </div>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn">
+        ☰
+    </button>
+
+</header>
+
+
+<!-- HOME -->
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="profile-container">
+
+            <img
+                id="profileImage"
+                src="https://via.placeholder.com/250"
+                alt="Profile Picture"
+            >
+
+            <label for="profileUpload" class="profile-edit">
+                ✎
+            </label>
+
+            <input
+                type="file"
+                id="profileUpload"
+                accept="image/*"
+                hidden
+            >
+
+        </div>
+
+        <div class="hero-text">
+
+            <p class="small-title">
+                WELCOME TO MY
+            </p>
+
+            <h1>
+                Academic
+                <span>Portfolio</span>
+            </h1>
+
+            <h2>
+                <span id="typingText"></span>
+            </h2>
+
+            <p>
+                A collection of my academic activities, quizzes,
+                examinations, laboratory activities, and projects.
+            </p>
+
+            <a href="#portfolio" class="main-btn">
+                Explore My Portfolio
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+
+    <div class="section-title">
+
+        <p>GET TO KNOW ME</p>
+
+        <h2>
+            About <span>Me</span>
+        </h2>
+
+    </div>
+
+    <div class="about-card">
+
+        <div class="about-icon">
+            &lt;/&gt;
+        </div>
+
+        <div>
+
+            <h3>
+                Hello, I'm John David Javier
+            </h3>
+
+            <p>
+                I am a Computer Science student who wants to improve
+                my knowledge and skills in programming, web development,
+                software development, and information technology.
+            </p>
+
+            <p>
+                This portfolio contains my academic progress,
+                activities, examinations, laboratory outputs,
+                and projects throughout my studies.
+            </p>
+
+            <div class="skills">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Programming</span>
+                <span>Web Development</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section portfolio-section">
+
+    <div class="section-title">
+
+        <p>MY ACADEMIC WORK</p>
+
+        <h2>
+            Academic <span>Portfolio</span>
+        </h2>
+
+    </div>
+
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="category-buttons">
+
+        <button class="category-btn active" data-category="quiz">
+            Quiz
+        </button>
+
+        <button class="category-btn" data-category="longquiz">
+            Long Quiz
+        </button>
+
+        <button class="category-btn" data-category="midterms">
+            Midterms
+        </button>
+
+        <button class="category-btn" data-category="finals">
+            Finals
+        </button>
+
+        <button class="category-btn" data-category="activities">
+            Activities
+        </button>
+
+        <button class="category-btn" data-category="projects">
+            Projects
+        </button>
+
+    </div>
+
+
+    <!-- UPLOAD AREA -->
+
+    <div class="upload-card">
+
+        <div>
+
+            <h3 id="currentCategory">
+                Quiz
+            </h3>
+
+            <p>
+                Upload multiple images or files for this category.
+            </p>
+
+        </div>
+
+        <label class="upload-btn">
+
+            + Upload Files
+
+            <input
+                type="file"
+                id="fileUpload"
+                multiple
+                hidden
+            >
+
+        </label>
+
+    </div>
+
+
+    <!-- COUNTER -->
+
+    <div class="counter">
+
+        <div>
+            <strong id="fileCount">0</strong>
+            <span>Files Uploaded</span>
+        </div>
+
+        <div>
+            <strong id="imageCount">0</strong>
+            <span>Images</span>
+        </div>
+
+    </div>
+
+
+    <!-- FILE GRID -->
+
+    <div id="fileGrid" class="file-grid">
+
+        <!-- Files appear here -->
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-logo">
+        &lt; JDJ /&gt;
+    </div>
+
+    <p>
+        Academic Portfolio • Built with HTML, CSS & JavaScript
+    </p>
+
+    <p class="copyright">
+        © 2026 John David Javier. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- FIREBASE -->
+
+<script type="module">
+
+    /*
+    ============================================================
+    FIREBASE CONFIGURATION
+    ============================================================
+
+    Replace the values below with your Firebase project
+    configuration.
+
+    Create a Firebase project at:
+    https://firebase.google.com/
+
+    Enable:
+    1. Firestore Database
+    2. Storage
+
+    Then copy your Web App configuration here.
+    */
+
+    import { initializeApp }
+    from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+
+    import {
+        getFirestore,
+        collection,
+        addDoc,
+        getDocs,
+        query,
+        orderBy
+    }
+    from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+    import {
+        getStorage,
+        ref,
+        uploadBytes,
+        getDownloadURL
+    }
+    from "https://www.gstatic.com/firebasejs/12.2.1/firebase-storage.js";
+
+
+    const firebaseConfig = {
+
+        apiKey: "YOUR_API_KEY",
+
+        authDomain: "YOUR_PROJECT.firebaseapp.com",
+
+        projectId: "YOUR_PROJECT_ID",
+
+        storageBucket: "YOUR_PROJECT.firebasestorage.app",
+
+        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+
+        appId: "YOUR_APP_ID"
+
+    };
+
+
+    const app = initializeApp(firebaseConfig);
+
+    const db = getFirestore(app);
+
+    const storage = getStorage(app);
+
+
+    window.firebaseDB = db;
+    window.firebaseStorage = storage;
+    window.firebaseFunctions = {
+
+        collection,
+        addDoc,
+        getDocs,
+        query,
+        orderBy,
+        ref,
+        uploadBytes,
+        getDownloadURL
+
+    };
+
+</script>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
